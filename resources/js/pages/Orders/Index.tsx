@@ -5,15 +5,15 @@ import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Download, Eye, FileEdit, MoreHorizontal, Plus, Search, Trash2 } from "lucide-react"
-import { Link } from "@inertiajs/react"
+import { Head, Link } from "@inertiajs/react"
 import AppLayout from "@/layouts/app-layout"
 import { BreadcrumbItem } from "@/types"
 
 export default function OrdersPage() {
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Products',
-        href: '/products',
+        title: 'Orders',
+        href: '/orders',
     },
 ];
   const [searchQuery, setSearchQuery] = useState("")
@@ -21,6 +21,7 @@ const breadcrumbs: BreadcrumbItem[] = [
 
   return (
     <AppLayout breadcrumbs={breadcrumbs}>
+      <Head title="Orders" />
       <div className="space-y-6 m-10">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
